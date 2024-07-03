@@ -31,5 +31,9 @@ else
 fi
 done
 
+# Add the IP address assignment
+suffix="${usrName: -2}"  # Get the last two characters of usrName
+sudo ip addr add 10.0.0.$suffix/24 dev eth0
+
 
 
